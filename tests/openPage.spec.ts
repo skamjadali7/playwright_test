@@ -1,7 +1,18 @@
 import {test} from '@playwright/test'
 
-test('open playwright page',async({page})=>{
-   await page.goto('http://localhost:4200/');
-   await page.getByText('Forms').click()
-   await page.getByText('Form Layouts').click()
+test.beforeEach(async({page})=>{
+    await page.goto('http://localhost:4200/');
+    await page.getByText('Forms').click()
+})
+
+test.describe('open form page',()=>{
+    test('open both form page',async({page})=>{
+        await page.getByText('Form Layouts').click()
+     })
+})
+
+test.describe('open datepicker',()=>{
+    test('open both datepicker', async({page})=>{
+        await page.getByText('Datepicker').click()
+    })
 })
