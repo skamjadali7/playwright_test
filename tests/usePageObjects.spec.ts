@@ -1,5 +1,5 @@
 import {test} from '@playwright/test'
-import { Navigations } from './page-object/sideNavigation'
+import { Navigations } from '../page-object/sideNavigation'
 test.beforeEach(async({page})=>{
     await page.goto('http://localhost:4200/')
 })

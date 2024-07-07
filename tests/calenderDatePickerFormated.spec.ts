@@ -1,6 +1,6 @@
 import {test} from '@playwright/test'
-import { Navigations } from './page-object/sideNavigation';
-import { Calender } from './page-object/calenderPicker';
+import { Navigations } from '../page-object/sideNavigation';
+import { Calender } from '../page-object/calenderPicker';
 test('common date picker',async({page})=>{
     const datePicker = new Navigations(page)
     const calender = new Calender(page)
