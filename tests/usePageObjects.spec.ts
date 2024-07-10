@@ -1,7 +1,7 @@
 import {test} from '@playwright/test'
 import { Navigations } from '../page-object/sideNavigation'
 test.beforeEach(async({page})=>{
-    await page.goto('http://localhost:4200/')
+    await page.goto('/')
 })
 
 test('naviagte each sidemenu',async({page})=>{

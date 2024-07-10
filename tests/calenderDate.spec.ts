@@ -1,7 +1,7 @@
 import {expect, test} from '@playwright/test'
-
+test.describe.configure({mode:'serial'}) // to put dependecy if one test fail other will not execute
 test.beforeEach(async({page})=>{
-    await page.goto('http://localhost:4200/');
+    await page.goto('/');
     await page.getByText('Forms').click()
     await page.getByText('Datepicker').click()
 })

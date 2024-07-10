@@ -1,7 +1,7 @@
-import {test} from '@playwright/test'
+import {test} from './../test-options'
 
-test.beforeEach(async({page})=>{
-    await page.goto('https://www.globalsqa.com/demo-site/draganddrop/')
+test.beforeEach(async({page,globalQAurl})=>{
+    await page.goto(globalQAurl)
 })
 
 test('drag and drop on iframe in using dragTo()',async({page})=>{

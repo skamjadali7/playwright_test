@@ -1,7 +1,8 @@
 import {expect, test} from '@playwright/test'
+const waitURL = process.env.URL ?? ''  // Define the URL by .env process
 
 test.beforeEach(async({page})=>{
-    await page.goto('http://uitestingplayground.com/ajax')
+    await page.goto(waitURL)
 })
 
 test('auto wait mechanisim with waitFor state',async({page})=>{

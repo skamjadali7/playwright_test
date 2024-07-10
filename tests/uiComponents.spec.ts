@@ -1,10 +1,10 @@
 import {expect, test} from '@playwright/test'
-
+test.describe.configure({mode:'parallel'}) // to run parallely
 // In this we use force:true query becoz those elemetns are hidden
 
 // This will run in entrie file
 test.beforeEach(async({page})=>{
-    await page.goto('http://localhost:4200/');
+    await page.goto('/');
 })
 // this is specific test suite
 test.describe('Input Filed and Radio Validation',()=>{
